@@ -9,4 +9,6 @@ public interface IRegexFinder {
 
     // Returns kind / name of regex finder.
     String whoAmI();
+
+    boolean match(String toCheck);
 }

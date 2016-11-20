@@ -13,4 +13,9 @@ public class PhoneNumberRegexFinder implements IRegexFinder {
     public String whoAmI() {
         return RegexFinderTypes.PHONE_NUMBER_REGEX_FINDER;
     }
+
+    @Override
+    public boolean match(String toCheck) {
+        return false;
+    }
 }
