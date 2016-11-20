@@ -47,4 +47,15 @@ public class RegexTests {
     public void testDate8() {
         Assert.assertFalse(mFinder.match("300:232:02"));
     }
+
+    @Test
+    public void testDate9() {
+        Assert.assertTrue(mFinder.match("300.12.02"));
+    }
+
+    @Test
+    public void testDate10() {
+        Assert.assertTrue(mFinder.match("300/12/02"));
+    }
+
 }
