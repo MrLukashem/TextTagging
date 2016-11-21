@@ -1,4 +1,5 @@
 import com.studiesproject.utils.DateRegexFinder;
+import com.studiesproject.utils.PhoneNumberRegexFinder;
 import org.junit.Test;
 import org.junit.Assert;
 
@@ -7,6 +8,8 @@ import org.junit.Assert;
  */
 public class RegexTests {
     private DateRegexFinder mFinder = new DateRegexFinder();
+
+    private PhoneNumberRegexFinder mPhoneFinder = new PhoneNumberRegexFinder();
 
     @Test
     public void testDate1() {
@@ -58,4 +61,69 @@ public class RegexTests {
         Assert.assertTrue(mFinder.match("300/12/02"));
     }
 
+    @Test
+    public void testDate11() {
+        Assert.assertTrue(mFinder.match("300.I.02"));
+    }
+
+    @Test
+    public void testDate12() {
+        Assert.assertTrue(mFinder.match("3000.XI.31"));
+    }
+
+    // Phone numbers regex tests
+    @Test
+    public void testPhoneNumber1() {
+        Assert.assertTrue(mPhoneFinder.match("68 3276773"));
+    }
+
+    @Test
+    public void testPhoneNumber2() {
+        Assert.assertTrue(mPhoneFinder.match("22 9076773"));
+    }
+
+    @Test
+    public void testPhoneNumber3() {
+        Assert.assertTrue(mPhoneFinder.match("+48 68 3276773"));
+    }
+
+    @Test
+    public void testPhoneNumber4() {
+        Assert.assertTrue(mPhoneFinder.match("+48 722392303"));
+    }
+
+    @Test
+    public void testPhoneNumber5() {
+        Assert.assertTrue(mPhoneFinder.match("+48722392303"));
+    }
+
+    @Test
+    public void testPhoneNumber6() {
+        Assert.assertTrue(mPhoneFinder.match("+48683276773"));
+    }
+
+    @Test
+    public void testPhoneNumber7() {
+        Assert.assertTrue(mPhoneFinder.match("+48 68 3276773"));
+    }
+
+    @Test
+    public void testPhoneNumber8() {
+        Assert.assertTrue(mPhoneFinder.match("+48 68 327 67 73"));
+    }
+
+    @Test
+    public void testPhoneNumber9() {
+        Assert.assertTrue(mPhoneFinder.match("68 327 67 73"));
+    }
+
+    @Test
+    public void testPhoneNumber10() {
+        Assert.assertTrue(mPhoneFinder.match("72 239 23 03"));
+    }
+
+    @Test
+    public void testPhoneNumber11() {
+        Assert.assertTrue(mPhoneFinder.match("722392303"));
+    }
 }
