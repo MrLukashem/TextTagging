@@ -1,6 +1,7 @@
 package com.studiesproject;
 
 import com.studiesproject.engine.SentensesSplitter;
+import com.studiesproject.engine.SplitterEngine;
 import com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
 import org.w3c.dom.Document;
 
@@ -10,6 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        SplitterEngine engine = new SplitterEngine();
+        engine.setSourceFile("TESTOWY_PLIK.txt");
 
+        engine.getNextSentense();
     }
 }
