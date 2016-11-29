@@ -1,5 +1,6 @@
 package com.studiesproject.engine;
 
+import com.studiesproject.utils.Log;
 import com.sun.istack.internal.NotNull;
 
 import java.io.BufferedReader;
@@ -13,6 +14,8 @@ import java.nio.file.Paths;
  * Created by mrlukashem on 21.11.16.
  */
 public class SplitterEngine {
+    private static final String TAG = "SPLITTER_ENGINE";
+
     private String mFileName = "";
     private String mOld = "";
 
@@ -70,7 +73,7 @@ public class SplitterEngine {
             mPrepared = true;
             return mPrepared;
         } catch (IOException ioe) {
-            System.out.println("io exception SplitterEngine::prepare");
+            Log.e(TAG, "io exception SplitterEngine::prepare");
             ioe.printStackTrace();
             mPrepared = false;
 
