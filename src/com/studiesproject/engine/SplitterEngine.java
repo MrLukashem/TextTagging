@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 /**
  * Created by mrlukashem on 21.11.16.
@@ -22,22 +23,25 @@ public class SplitterEngine {
     private BufferedReader mReader;
     private boolean mPrepared;
 
+    private final String mSentenceSeparatorRegex = "((.*)\\.(.*))+";
+
     // Parse a string buffer and returns it in array.
-    // array[0] = a sentense.
+    // array[0] = a sentence.
     // array[1] = rest of buffer.
     private String[] parse(String stringBuffer) {
         String moreDataString = "";
+        if (!isSentenseSeparator(stringBuffer)) {
+            while (!isSentenseSeparator(moreDataString)) {
+                // Read next line because we haven't found sentense separator yet.
+                moreDataString = feedMeMoreData();
+                // String is empty, it does mean we've read all text file or get a exception. So we need stop reading.
+                if (moreDataString.isEmpty()) {
+                    break;
+                }
 
-        while (!isSentenseSeparator(moreDataString)) {
-            // Read next line because we haven't found sentense separator yet.
-            moreDataString = feedMeMoreData();
-            // String is empty, it does mean we've read all text file or get a exception. So we need stop reading.
-            if (moreDataString.isEmpty()) {
-                break;
+                // add new string
+                stringBuffer += moreDataString;
             }
-
-            // add new string
-            stringBuffer += moreDataString;
         }
 
         return catSentense(stringBuffer);
@@ -49,7 +53,7 @@ public class SplitterEngine {
 
     private boolean isSentenseSeparator(String line) {
         // more complex operations will be put soon.
-        return line.matches("\\.");
+        return line.matches(mSentenceSeparatorRegex);
     }
 
     private String feedMeMoreData() {
@@ -81,6 +85,15 @@ public class SplitterEngine {
         }
     }
 
+    private String copyArrayToString(String in, String[] array, int startIdx) {
+        String out = "";
+        for (int i = startIdx; i < array.length; i++) {
+            out += array[i] + ".";
+        }
+
+        return out;
+    }
+
     public boolean setSourceFileAndPrepare(@NotNull String fileName) {
         mFileName = fileName;
         return prepare();
@@ -93,19 +106,25 @@ public class SplitterEngine {
         }
 
         String line = mOld;
-        String temp = mReader.readLine();
-        if (temp == null) {
-            return "";
+        // if mOld has sentence already don't read next line from a text file.
+        if (!isSentenseSeparator(line)) {
+            String temp = mReader.readLine();
+            if (temp == null) {
+                mReader.close();
+                return "";
+            }
+
+            line += temp;
         }
 
-        line += temp;
-
         String[] resultArray = parse(line);
-        if (resultArray.length == 2) {
-            mOld = resultArray[0];
-            return resultArray[1];
+        if (resultArray.length > 1) {
+            mOld = copyArrayToString(mOld, resultArray, 1);
+            //mOld = resultArray[0];
+            return resultArray[0];
         } else if (resultArray.length == 1) {
-            mReader.close();
+            // We should clear mOld String because we can have infinite loop in the case.
+            mOld = "";
             // we have no more data. So next time we should return empty String.
             return resultArray[0];
         } else {

@@ -3,8 +3,6 @@ package com.studiesproject.engine;
 import com.sun.istack.internal.NotNull;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by mrlukashem on 21.11.16.
@@ -35,7 +33,7 @@ public class SentensesSplitter {
             // We received new buffer so mNextCalled have to set to false.
             mNextCalled = false;
             // Return mBuffer value, if it is empty, it means we has read all source.
-            return mBuffer.isEmpty();
+            return !mBuffer.isEmpty();
         } catch (IOException ioe) {
             // TODO: any stack trace? any log?
             return false;

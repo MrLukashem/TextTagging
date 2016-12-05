@@ -7,7 +7,7 @@ public class URLRegexFinder implements IRegexFinder {
 
     private final String TAG = "URL";
 
-    private final String mRegex = "http://[a-zA-Z0-9]]*";
+    private final String mRegex = "";
 
     private boolean findURLinString(String toCheck) {
         return toCheck.matches(mRegex);

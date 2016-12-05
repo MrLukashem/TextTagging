@@ -17,11 +17,17 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 	// write your code here
-        SplitterEngine engine = new SplitterEngine();
-        engine.setSourceFile("TESTOWY_PLIK.txt");
+        SentensesSplitter splitter = new SentensesSplitter();
+        splitter.setDataSourceAndPrepare("TESTOWY_PLIK.txt");
 
         String s = "ewqeqwe";
         System.out.println( s == test(s));
-        engine.getNextSentense();
+
+        while (splitter.hasNext()) {
+            String next = splitter.next();
+            if (!next.isEmpty()) {
+                System.out.println(next);
+            }
+        }
     }
 }

@@ -126,4 +126,11 @@ public class RegexTests {
     public void testPhoneNumber11() {
         Assert.assertTrue(mPhoneFinder.match("722392303"));
     }
+
+
+
+    @Test
+    public void testSentenceSplitterRegex() {
+        Assert.assertTrue("Testowy String. Drugie zdanie".matches("((.*)\\.(.*))*"));
+    }
 }
