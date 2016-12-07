@@ -3,10 +3,13 @@ import com.sun.istack.internal.NotNull;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by mrlukashem on 29.11.16.
@@ -23,8 +26,12 @@ public class XmlWriterCore {
         mBuilder = mFactory.newDocumentBuilder();
     }
 
-    public void create(@NotNull String name) {
+    public void create(@NotNull String name) throws IOException, SAXException {
         mOutputFileName = name;
+
+        File file = new File(mOutputFileName);
+        mDoc = mBuilder.parse(file);
+        mDoc.getDocumentElement().normalize();
     }
 
     public Element makeElement(String name) {

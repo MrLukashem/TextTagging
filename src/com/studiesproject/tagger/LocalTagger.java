@@ -1,9 +1,20 @@
 package com.studiesproject.tagger;
 
 import com.studiesproject.engine.SentensesSplitter;
-import com.studiesproject.utils.IRegexFinder;
+import com.studiesproject.engine.xml.XmlWriterCore;
+import com.studiesproject.utils.*;
 import com.sun.istack.internal.NotNull;
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +23,11 @@ import java.util.List;
  * Created by mrlukashem on 30.11.16.
  */
 public class LocalTagger {
+    private static final String TAG = "LocalTagger";
     private String mInFileName;
     private String mOutFileName;
+
+    private final char ELEMENT_SEPARATOR = ' ';
 
     private List<IRegexFinder> mRegexFindersList = new ArrayList<>();
 
@@ -23,35 +37,153 @@ public class LocalTagger {
             throw new IOException("File name is not set");
     }
 
-    public LocalTagger() {}
+    private void setupFindersList() {
+        mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.DATE_REGEX_FINDER));
+        mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.PHONE_NUMBER_REGEX_FINDER));
+        mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.URL_REGEX_FINDER));
+    }
+
+    // Results last word in sentence.
+    private String getLastElement(String sentence, int tryNumbers) {
+        for (int i = sentence.length(); i >= 0; i--) {
+            if (sentence.charAt(i) == ELEMENT_SEPARATOR) {
+                if (tryNumbers == 0) {
+                    return sentence.substring(i + 1);
+                }
+
+                --tryNumbers;
+            }
+        }
+
+        return sentence;
+    }
+
+    private void putAdditionalTagsToFile(Document document) {
+        NodeList nodeList = document.getElementsByTagName("element");
+        mRegexFindersList.forEach(
+                finder -> {
+                    // To reduce references objects.
+                    Node parent;
+                    Element newElement;
+                    for (int i = 0; i < nodeList.getLength(); i++) {
+                        Node node = nodeList.item(i);
+                        if (finder.match(node.getTextContent())) {
+                            parent = node.getParentNode();
+                            newElement = document.createElement(finder.getTag());
+                            newElement.setTextContent(node.getTextContent());
+                            parent.appendChild(newElement);
+                        }
+                    }
+                }
+        );
+    }
+
+    private boolean saveDocument(Document document) {
+        try {
+            TransformerFactory transformerFactory =
+                    TransformerFactory.newInstance();
+            Transformer transformer =
+                    transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(document);
+            StreamResult result =
+                    new StreamResult(new File(mOutFileName));
+            transformer.transform(source, result);
+            // Output to console for testing
+            StreamResult consoleResult =
+                    new StreamResult(System.out);
+            transformer.transform(source, consoleResult);
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+            return false;
+        } catch (TransformerException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    private void modify(Document document, String oldTag, String newTag) {
+        NodeList nodeList = document.getElementsByTagName(oldTag);
+        Element element;
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            element = (Element) nodeList.item(i);
+            document.renameNode(element, element.getNamespaceURI(), newTag);
+        }
+    }
+
+    private void removeRedundant(Document document) {
+        NodeList nodeList = document.getElementsByTagName("tok");
+        NodeList children;
+        Node node;
+        Node child;
+        boolean isFirstLexVisited = false;
+        // O (n^2) : (
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            node = nodeList.item(i);
+            children = node.getChildNodes();
+            for (int j = 0; j < children.getLength(); j++) {
+                child = children.item(j);
+                if (child.getNodeName().equals("lex")) {
+                    if (isFirstLexVisited) {
+                        node.removeChild(child);
+                    } else {
+                        isFirstLexVisited = true;
+                    }
+                }
+            }
+            isFirstLexVisited = false;
+        }
+    }
+
+    private void prepareXmlFIle(Document document) {
+        removeRedundant(document);
+
+        modify(document, "orth", "element");
+        modify(document, "chunk", "sentence");
+        modify(document, "tok", "element_desc");
+    }
+
+    public LocalTagger() {
+        mInFileName = "input.xml";
+        mOutFileName = "output.xml";
+
+        setupFindersList();
+    }
 
     public LocalTagger(@NotNull String in, @NotNull String out) {
         mInFileName = in;
         mOutFileName = out;
+
+        setupFindersList();
     }
 
-    public boolean saveDocument() throws IOException {
-        return false;
-    }
+    public boolean startProcessing() throws IOException, TransformerException {
+        XmlWriterCore writerCore = null;
+        Document doc;
+        try {
+            writerCore = new XmlWriterCore();
+            writerCore.create("temp_copy.xml");
+            doc = writerCore.getDocument();
 
-    public boolean startProcessing() throws IOException {
-        SentensesSplitter splitter = new SentensesSplitter();
-        splitter.setDataSourceAndPrepare(mOutFileName);
+            prepareXmlFIle(doc);
+            putAdditionalTagsToFile(doc);
 
-        String sentenceRef = null;
-        while (splitter.hasNext()) {
-            sentenceRef = splitter.next();
-
-            // TODO: Do we need below check?
-            if (sentenceRef != null) {
-                mRegexFindersList.forEach(
-                        (IRegexFinder finder) -> {
-                            
-                        }
-                );
-            }
+            saveDocument(doc);
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+            Log.e(TAG, "Error while processing");
+            return false;
+        } catch (SAXException e) {
+            e.printStackTrace();
+            Log.e(TAG, "Error while processing");
+            return false;
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.e(TAG, "Error while processing");
+            return false;
         }
 
-        return false;
+        return true;
     }
 }
