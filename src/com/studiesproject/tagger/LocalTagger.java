@@ -17,6 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -59,7 +60,7 @@ public class LocalTagger {
     }
 
     private void putAdditionalTagsToFile(Document document) {
-        NodeList nodeList = document.getElementsByTagName("element");
+        NodeList nodeList = document.getElementsByTagName("element_name");
         mRegexFindersList.forEach(
                 finder -> {
                     // To reduce references objects.
@@ -136,12 +137,165 @@ public class LocalTagger {
         }
     }
 
-    private void prepareXmlFIle(Document document) {
-        removeRedundant(document);
+    private boolean isProperNoun(Node content) {
+        boolean isProperNoun =
+                (content.getTextContent().length() > 0
+                        && Character.isUpperCase(content.getTextContent().charAt(0)));
 
-        modify(document, "orth", "element");
+        if (isProperNoun) {
+            if (content.getTextContent().equals("Microsoft")) {
+                int i = 0;
+            }
+            NodeList list = content.getParentNode().getChildNodes();
+            Node node;
+            boolean oneLexOnly = true;
+
+            for (int i = 0; i < list.getLength(); i++) {
+                node = list.item(i);
+                if (node.getNodeName().equals("lex")) {
+                    Node ctag = node.getLastChild();
+                    String s = ctag.getTextContent();
+                    oneLexOnly &= s.contains("subst");
+                }
+            }
+
+            return oneLexOnly;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isTaggedAsProperNoun(Node parentNode) {
+        NodeList childNodes = parentNode.getChildNodes();
+
+        for (int i = 0; i < childNodes.getLength(); i++) {
+            if (childNodes.item(i).getNodeName().equals("proper_noun")) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private List<String> findFirstOccurrence(Document document) {
+        List<String> resultList = new ArrayList<>(2);
+
+        NodeList nodeList = document.getElementsByTagName("element_name");
+        Node node;
+        String content;
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            node = nodeList.item(i);
+            if (isTaggedAsProperNoun(node.getParentNode())) {
+                continue;
+            }
+
+            content = node.getTextContent();
+
+            if (content.equals("Microsoft")) {
+                int d = 0;
+            }
+            // Probably a proper noun if true.
+            if (isProperNoun(node)) {
+                resultList.add(content);
+            } else {
+                if (!resultList.isEmpty()) {
+                    return resultList;
+                }
+            }
+        }
+
+        return resultList;
+    }
+
+    private boolean properNounExam(Document document, List<String> list) {
+        NodeList nodeList = document.getElementsByTagName("element_name");
+        String content;
+        String listContent;
+        Iterator<String> itr = list.iterator();
+        boolean firstElement = true;
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            content = nodeList.item(i).getTextContent();
+
+            boolean hasNext = itr.hasNext();
+            if (hasNext) {
+                listContent = itr.next();
+                if (firstElement && listContent.equals(content)) {
+                    // First OK.
+                    firstElement = false;
+                    //     } else if (hasNext && itr.next().equals(content)){
+                    //            Next OK.
+                } else if (firstElement && !listContent.equals(content)) {
+                    itr = list.iterator();
+                } else if (!listContent.equals(content)) {
+                    return false;
+                }
+            }
+
+            if (!itr.hasNext()) {
+                // Reset the iterator.
+                itr = list.iterator();
+                firstElement = true;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean applyProperNounTag(Document document, List<String> list) {
+        NodeList nodeList = document.getElementsByTagName("element_name");
+        Node parent;
+        Element newElement;
+        String content;
+        Iterator<String> itr = list.iterator();
+        boolean tagApplied = false;
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            content = nodeList.item(i).getTextContent();
+
+            if (!itr.hasNext()) {
+                itr = list.iterator();
+            }
+
+            if (itr.hasNext()) {
+                if (itr.next().equals(content)) {
+                    parent = nodeList.item(i).getParentNode();
+                    newElement = document.createElement("proper_noun");
+                    newElement.setTextContent(content);
+                    parent.appendChild(newElement);
+                    tagApplied = true;
+                } else {
+                    itr = list.iterator();
+                }
+            }
+        }
+
+        return tagApplied;
+    }
+
+    private boolean findProperNouns(Document document) {
+        List<String> properNoun = findFirstOccurrence(document);
+
+        boolean pass = false;
+        if (properNoun.size() > 0) {
+            pass = properNounExam(document, properNoun);
+        }
+
+        return (pass && applyProperNounTag(document, properNoun));
+    }
+
+    private void prepareXmlFIle(Document document) {
+        modify(document, "orth", "element_name");
         modify(document, "chunk", "sentence");
         modify(document, "tok", "element_desc");
+
+        for(;;) {
+            if (!findProperNouns(document))
+                break;
+        }
+
+        removeRedundant(document);
     }
 
     public LocalTagger() {
@@ -163,7 +317,7 @@ public class LocalTagger {
         Document doc;
         try {
             writerCore = new XmlWriterCore();
-            writerCore.create("temp_copy.xml");
+            writerCore.create("spidersweb_article_out.xml");
             doc = writerCore.getDocument();
 
             prepareXmlFIle(doc);
