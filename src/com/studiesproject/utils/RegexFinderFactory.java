@@ -16,6 +16,9 @@ public class RegexFinderFactory {
             case RegexFinderTypes.URL_REGEX_FINDER:
                 finder = new URLRegexFinder();
                 break;
+            case RegexFinderTypes.CUSTOM_DATE_REGEX_FINDER:
+                finder = new CustomDateRegexFinder();
+                break;
         }
 
         // Change to Null Object.

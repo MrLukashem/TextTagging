@@ -50,7 +50,7 @@ public class DateRegexFinder implements IRegexFinder {
 
     @Override
     public String getTag() {
-        return null;
+        return TAG;
     }
 
     @Override

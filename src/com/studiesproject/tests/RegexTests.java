@@ -1,5 +1,7 @@
+import com.studiesproject.utils.CustomDateRegexFinder;
 import com.studiesproject.utils.DateRegexFinder;
 import com.studiesproject.utils.PhoneNumberRegexFinder;
+import com.studiesproject.utils.URLRegexFinder;
 import org.junit.Test;
 import org.junit.Assert;
 
@@ -10,6 +12,10 @@ public class RegexTests {
     private DateRegexFinder mFinder = new DateRegexFinder();
 
     private PhoneNumberRegexFinder mPhoneFinder = new PhoneNumberRegexFinder();
+
+    private URLRegexFinder mUrlFinder = new URLRegexFinder();
+
+    private CustomDateRegexFinder mCDateFinder = new CustomDateRegexFinder();
 
     @Test
     public void testDate1() {
@@ -128,6 +134,83 @@ public class RegexTests {
     }
 
 
+    // URLRegexFinder tests
+    @Test
+    public void testUrl1() {
+        Assert.assertTrue(mUrlFinder.match("www.google.com"));
+    }
+
+    @Test
+    public void testUrl2() {
+        Assert.assertTrue(mUrlFinder.match("www.google.pl"));
+    }
+
+    @Test
+    public void testUrl3() {
+        Assert.assertTrue(mUrlFinder.match("http://www.google.en"));
+    }
+
+    @Test
+    public void testUrl4() {
+        Assert.assertTrue(mUrlFinder.match("https://www.testdlugiegolinkaurl_test_test_tes.com"));
+    }
+
+    @Test
+    public void testUrl5() {
+        Assert.assertTrue(mUrlFinder.match("www.mykomputer.com"));
+    }
+
+    @Test
+    public void testUrl6() {
+        Assert.assertFalse(mUrlFinder.match("www.google"));
+    }
+
+    @Test
+    public void testUrl7() {
+        Assert.assertFalse(mUrlFinder.match("htttp://www.google.com"));
+    }
+
+    @Test
+    public void testUrl8() {
+        Assert.assertFalse(mUrlFinder.match("http://www.hello.p"));
+    }
+
+
+    // CustomDateRegexFinder tests.
+    @Test
+    public void testCDate1() {
+        Assert.assertTrue(mCDateFinder.match("20 stycznia"));
+    }
+
+    @Test
+    public void testCDate2() {
+        Assert.assertTrue(mCDateFinder.match("31 styczeń"));
+    }
+
+    @Test
+    public void testCDate3() {
+        Assert.assertTrue(mCDateFinder.match("01 Stycznia"));
+    }
+
+    @Test
+    public void testCDate4() {
+        Assert.assertTrue(mCDateFinder.match("4 stycznia"));
+    }
+
+    @Test
+    public void testCDate5() {
+        Assert.assertTrue(mCDateFinder.match("stycznia"));
+    }
+
+    @Test
+    public void testCDate6() {
+        Assert.assertTrue(mCDateFinder.match("styczniu"));
+    }
+
+    @Test
+    public void testCDate7() {
+        Assert.assertTrue(mCDateFinder.match("10 stycznia"));
+    }
 
     @Test
     public void testSentenceSplitterRegex() {

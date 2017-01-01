@@ -42,6 +42,7 @@ public class LocalTagger {
         mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.DATE_REGEX_FINDER));
         mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.PHONE_NUMBER_REGEX_FINDER));
         mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.URL_REGEX_FINDER));
+        mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.CUSTOM_DATE_REGEX_FINDER));
     }
 
     // Results last word in sentence.

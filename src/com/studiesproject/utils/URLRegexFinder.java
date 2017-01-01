@@ -7,7 +7,7 @@ public class URLRegexFinder implements IRegexFinder {
 
     private final String TAG = "URL";
 
-    private final String mRegex = "";
+    private final String mRegex = "(https?:\\/\\/(?:www\\.|(?!www))[^\\s\\.]+\\.[^\\s]{2,}|www\\.[^\\s]+\\.[^\\s]{2,})";
 
     private boolean findURLinString(String toCheck) {
         return toCheck.matches(mRegex);
