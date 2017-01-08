@@ -2,7 +2,9 @@ package com.studiesproject;
 
 import com.studiesproject.engine.SentensesSplitter;
 import com.studiesproject.engine.SplitterEngine;
+import com.studiesproject.proxy.TaggerProxy;
 import com.studiesproject.tagger.LocalTagger;
+import com.studiesproject.utils.Log;
 import com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
 import org.w3c.dom.Document;
 
@@ -19,6 +21,8 @@ import java.io.IOException;
 public class Main {
 
     protected static final String REGEX_1 = "[0-9]*:(0+[1-9]):(([0-2]+[0-9])|30|31)";
+
+    private static final String TAG = "Main";
 
     public static String test(String e) {
         return new String(e);
@@ -40,7 +44,15 @@ public class Main {
             }
         }*/
 
-        LocalTagger tagger = new LocalTagger();
+        TaggerProxy proxy = new TaggerProxy();
+        proxy.setInputFile("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\testowy.txt");
+        proxy.setOutputFile("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\newOutput2.xml");
+
+        if (!proxy.blockRun()) {
+            Log.e(TAG, "proxy.blockRun() error");
+        }
+
+        LocalTagger tagger = new LocalTagger(proxy.getOutputFile(), "outputNowy.xml");
         tagger.startProcessing();
     }
 }

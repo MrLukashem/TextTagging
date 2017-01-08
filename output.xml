@@ -386,7 +386,7 @@
 <element_desc>
 <element_name>marca</element_name>
 <lex disamb="1"><base>marzec</base><ctag>subst:sg:gen:m3</ctag></lex>
-</element_desc>
+<cdate>marca</cdate></element_desc>
 <element_desc>
 <element_name>2017</element_name>
 <lex disamb="1"><base>2017</base><ctag>tnum:integer</ctag></lex>

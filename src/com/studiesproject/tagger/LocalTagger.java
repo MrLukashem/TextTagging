@@ -14,8 +14,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -42,7 +42,7 @@ public class LocalTagger {
         mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.DATE_REGEX_FINDER));
         mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.PHONE_NUMBER_REGEX_FINDER));
         mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.URL_REGEX_FINDER));
-        mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.CUSTOM_DATE_REGEX_FINDER));
+     //   mRegexFindersList.add(RegexFinderFactory.createFinder(RegexFinderTypes.CUSTOM_DATE_REGEX_FINDER));
     }
 
     // Results last word in sentence.
@@ -78,6 +78,9 @@ public class LocalTagger {
                     }
                 }
         );
+
+        CustomDateRegexFinder customDateRegexFinder = new CustomDateRegexFinder();
+        customDateRegexFinder.applyTagsToXmlFile(document);
     }
 
     private boolean saveDocument(Document document) {
@@ -144,9 +147,6 @@ public class LocalTagger {
                         && Character.isUpperCase(content.getTextContent().charAt(0)));
 
         if (isProperNoun) {
-            if (content.getTextContent().equals("Microsoft")) {
-                int i = 0;
-            }
             NodeList list = content.getParentNode().getChildNodes();
             Node node;
             boolean oneLexOnly = true;
@@ -290,6 +290,7 @@ public class LocalTagger {
         modify(document, "orth", "element_name");
         modify(document, "chunk", "sentence");
         modify(document, "tok", "element_desc");
+        modify(document, "ctag", "element_type");
 
         for(;;) {
             if (!findProperNouns(document))
@@ -297,6 +298,43 @@ public class LocalTagger {
         }
 
         removeRedundant(document);
+    }
+
+    private boolean prepareInputFile() {
+        RandomAccessFile currentInput = null;
+        RandomAccessFile fixedFile = null;
+
+        try {
+            currentInput = new RandomAccessFile(new File(mInFileName), "rw");
+            mInFileName = "fixedInput.xml";
+            fixedFile = new RandomAccessFile(new File(mInFileName), "rw");
+            fixedFile.setLength(0);
+            // copy files.
+            fixedFile.seek(0);
+            fixedFile.write("<file>".getBytes());
+
+            int singleBytesRead = (int) currentInput.length(); // single 100 bytes read.
+            byte[] bytes = new byte[singleBytesRead];
+            int offset = 0;
+            //    for (offset = 0; offset < randomAccessFile.length(); offset += singleBytesRead) {
+            currentInput.read(bytes, offset, singleBytesRead);
+            fixedFile.write(bytes);
+            //  }
+
+            fixedFile.seek(fixedFile.length());
+            fixedFile.write("</file>".getBytes());
+
+            fixedFile.close();
+            currentInput.close();
+        } catch (FileNotFoundException fnfe) {
+            Log.e(TAG, fnfe.getMessage());
+            return false;
+        } catch (IOException ioe) {
+            Log.e(TAG, ioe.getMessage());
+            return false;
+        }
+
+        return true;
     }
 
     public LocalTagger() {
@@ -314,11 +352,16 @@ public class LocalTagger {
     }
 
     public boolean startProcessing() throws IOException, TransformerException {
-        XmlWriterCore writerCore = null;
+        XmlWriterCore writerCore;
         Document doc;
         try {
+            if (!prepareInputFile()) {
+                Log.e(TAG, "prepareInputFile ERROR - Program terminated");
+                return false;
+            }
+
             writerCore = new XmlWriterCore();
-            writerCore.create("spidersweb_article_out.xml");
+            writerCore.create(mInFileName);
             doc = writerCore.getDocument();
 
             prepareXmlFIle(doc);

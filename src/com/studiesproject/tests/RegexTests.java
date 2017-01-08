@@ -2,8 +2,7 @@ import com.studiesproject.utils.CustomDateRegexFinder;
 import com.studiesproject.utils.DateRegexFinder;
 import com.studiesproject.utils.PhoneNumberRegexFinder;
 import com.studiesproject.utils.URLRegexFinder;
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.*;
 
 /**
  * Created by mrlukashem on 20.11.16.
@@ -210,6 +209,11 @@ public class RegexTests {
     @Test
     public void testCDate7() {
         Assert.assertTrue(mCDateFinder.match("10 stycznia"));
+    }
+
+    @Test
+    public void testCDate8() {
+        Assert.assertTrue(mCDateFinder.match("stycznia 1119"));
     }
 
     @Test
