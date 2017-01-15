@@ -1,5 +1,6 @@
 package com.studiesproject.utils;
 
+import org.junit.Assert;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -9,6 +10,8 @@ import org.w3c.dom.NodeList;
  * Created by mrlukashem on 29.12.16.
  */
 public class CustomDateRegexFinder implements IRegexFinder {
+
+    private final boolean DEBUG = true;
 
     private final String TAG = "cdate";
 
@@ -69,17 +72,39 @@ public class CustomDateRegexFinder implements IRegexFinder {
         return content;
     }
 
-    private void applyTagAndRemoveChildren(Document document, Node nodeToApplyTag, String content, Node... nodes) {
+    private boolean applyTagAndRemoveChildren(Document document, Node nodeToApplyTag, Node typeNode, String content
+            , Node... nodes) {
+
+        if (!nodeToApplyTag.getNodeName().equals("element_desc") && !typeNode.getNodeName().equals("element_type")) {
+            if (DEBUG) {
+                Assert.assertTrue(false);
+            }
+
+            return false;
+        }
+
         Node cDataNodeTag = document.createElement(TAG);
         cDataNodeTag.setTextContent(content);
         nodeToApplyTag.appendChild(cDataNodeTag);
+        typeNode.setTextContent(TAG);
 
+        NodeList children = nodeToApplyTag.getChildNodes();
+        Node child = null;
+        for (int i = 0; i < children.getLength(); i++) {
+            if ((child = children.item(i)).getNodeName().equals("element_name")) {
+                child.setTextContent(content);
+            }
+        }
+
+        // Remove redudant.
         for (Node toRemove : nodes) {
             toRemove.getParentNode().removeChild(toRemove);
         }
+
+        return true;
     }
 
-    protected boolean findCustomDateInString(String toCheck) {
+    private boolean findCustomDateInString(String toCheck) {
         boolean result = false;
         int i = 0;
 
@@ -125,7 +150,7 @@ public class CustomDateRegexFinder implements IRegexFinder {
             if (content.equals("tnum:integer")) { // Perhaps it is a date.
                 // First case.
                 int thirdElementOfDateIdx = i + 2;
-                if (nodeList.getLength() < thirdElementOfDateIdx) {
+                if (nodeList.getLength() > thirdElementOfDateIdx) {
                     // i + 2 element. Example: 11 stycznia 1992; 1992 is third element.
                     tempFirst = nodeList.item(thirdElementOfDateIdx - 2);
                     tempSecond = nodeList.item(thirdElementOfDateIdx - 1);
@@ -151,7 +176,7 @@ public class CustomDateRegexFinder implements IRegexFinder {
                             Node elementDescFirst = tempFirst.getParentNode().getParentNode();
                             Node elementDescSecond = tempSecond.getParentNode().getParentNode();
                             Node elementDescThird = tempThird.getParentNode().getParentNode();
-                            applyTagAndRemoveChildren(document, elementDescFirst, dateContentString,
+                            applyTagAndRemoveChildren(document, elementDescFirst, tempFirst, dateContentString,
                                     elementDescThird, elementDescSecond);
 
                             i = i + 2;
@@ -160,8 +185,9 @@ public class CustomDateRegexFinder implements IRegexFinder {
                     }
                 }
 
+                // styczen 1992
                 int secondElementOfDateIdx = i + 1;
-                if (nodeList.getLength() < secondElementOfDateIdx) {
+                if (nodeList.getLength() > secondElementOfDateIdx) {
 
                     // i + 1.
                     tempFirst = nodeList.item(secondElementOfDateIdx - 1);
@@ -181,7 +207,8 @@ public class CustomDateRegexFinder implements IRegexFinder {
                         if (found) {
                             Node elementDescFirst = tempFirst.getParentNode().getParentNode();
                             Node elementDescSecond = tempSecond.getParentNode().getParentNode();
-                            applyTagAndRemoveChildren(document, elementDescFirst, dateContentString, elementDescSecond);
+                            applyTagAndRemoveChildren(document, elementDescFirst, tempFirst, dateContentString
+                                    , elementDescSecond);
 
                             i = i + 1;
                             continue;
@@ -189,6 +216,7 @@ public class CustomDateRegexFinder implements IRegexFinder {
                     }
                 }
 
+                // 22 stycznia
                 int previousElementOfDateIdx = i - 1;
                 if (previousElementOfDateIdx >= 0) {
                     tempPrevious = nodeList.item(previousElementOfDateIdx);
@@ -210,11 +238,13 @@ public class CustomDateRegexFinder implements IRegexFinder {
                         if (found) {
                             Node elementDescFirst = tempFirst.getParentNode().getParentNode();
                             Node elementDescPrevious = tempPrevious.getParentNode().getParentNode();
-                            applyTagAndRemoveChildren(document, elementDescPrevious, dateContentString, elementDescFirst);
-                //            applyTagAndRemoveChildren(document, elementDescFirst, dateContentString, elementDescFirst);
+                            applyTagAndRemoveChildren(document, elementDescPrevious, tempPrevious, dateContentString
+                                    , elementDescFirst);
                         }
                     }
                 }
+
+
             }
 
         }

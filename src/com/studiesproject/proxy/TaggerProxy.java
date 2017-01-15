@@ -22,12 +22,18 @@ public class TaggerProxy {
 
     private String mOutputFile = "";
 
+    private String mTakipiPath = "";
+
     public void setInputFile(@NotNull String file) {
         mInputFile = file;
     }
 
     public void setOutputFile(@NotNull String file) {
         mOutputFile = file;
+    }
+
+    public void setTakipiPath(@NotNull String path) {
+        mTakipiPath = path;
     }
 
     public String getInputFile() {
@@ -39,8 +45,15 @@ public class TaggerProxy {
     }
 
     public boolean blockRun() {
+        String workingDir = mTakipiPath.replace("takipi.exe", "");
+        mOutputFile = workingDir + "\\" + mOutputFile;
         List<String> cmdsList = new LinkedList<>();
-        cmdsList.add("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\takipi.exe");
+
+        if (mTakipiPath.equals("")) {
+            cmdsList.add("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\takipi.exe");
+        } else {
+            cmdsList.add(mTakipiPath);
+        }
 
         if (!mInputFile.isEmpty()) {
             cmdsList.add("-i");
@@ -57,7 +70,12 @@ public class TaggerProxy {
             sArray = cmdsList.toArray(sArray);
 
             ProcessBuilder builder = new ProcessBuilder(sArray);
-            builder.directory(new File("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\"));
+            if (mTakipiPath.equals("")) {
+                builder.directory(new File("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\"));
+            } else {
+                builder.directory(new File(workingDir));
+            }
+
             Log.v(TAG, "proccess dir = " + builder.directory().getAbsolutePath());
             Process proc = builder.start(); //Runtime.getRuntime().exec(sArray);
 
@@ -76,9 +94,6 @@ public class TaggerProxy {
             }
 
             return err == NO_ERROR;
-     //   } catch (InterruptedException ie) {
-      //      Log.e(TAG, ie.getMessage());
-       //     return false;
         } catch (IOException ioe) {
             Log.e(TAG, ioe.getMessage());
             return false;

@@ -1,5 +1,6 @@
 package com.studiesproject;
 
+import com.studiesproject.SplitterComparator.Comparator;
 import com.studiesproject.engine.SentensesSplitter;
 import com.studiesproject.engine.SplitterEngine;
 import com.studiesproject.proxy.TaggerProxy;
@@ -7,6 +8,7 @@ import com.studiesproject.tagger.LocalTagger;
 import com.studiesproject.utils.Log;
 import com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl;
 import org.w3c.dom.Document;
+import ui.MainWindow;
 
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
@@ -20,6 +22,8 @@ import java.io.IOException;
 
 public class Main {
 
+    private static final boolean DEBUG = false;
+
     protected static final String REGEX_1 = "[0-9]*:(0+[1-9]):(([0-2]+[0-9])|30|31)";
 
     private static final String TAG = "Main";
@@ -29,30 +33,43 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException, TransformerException {
-	// write your code here
-        /*
-        SentensesSplitter splitter = new SentensesSplitter();
-        splitter.setDataSourceAndPrepare("TESTOWY_PLIK.txt");
+        if (DEBUG) {
+            TaggerProxy proxy = new TaggerProxy();
+            proxy.setTakipiPath("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\takipi.exe");
+            proxy.setInputFile("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\testowy.txt");
+            proxy.setOutputFile("newOutput2.xml");
 
-        String s = "ewqeqwe";
-        System.out.println( s == test(s));
-
-        while (splitter.hasNext()) {
-            String next = splitter.next();
-            if (!next.isEmpty()) {
-                System.out.println(next);
+            if (!proxy.blockRun()) {
+                Log.e(TAG, "proxy.blockRun() error");
             }
-        }*/
 
-        TaggerProxy proxy = new TaggerProxy();
-        proxy.setInputFile("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\testowy.txt");
-        proxy.setOutputFile("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\newOutput2.xml");
+            LocalTagger tagger = new LocalTagger(proxy.getOutputFile(), "outputNowy.xml");
+            tagger.startProcessing();
 
-        if (!proxy.blockRun()) {
-            Log.e(TAG, "proxy.blockRun() error");
+            Comparator comparator = new Comparator();
+            comparator.setSentenceSplitterInputFile("C:\\Users\\MrLukashem\\Downloads\\TaKIPI18\\TaKIPI18\\Windows\\testowy.txt");
+            comparator.setXmlInputFile(proxy.getOutputFile());
+            comparator.compare();
+        } else {
+            MainWindow mainWindow = new MainWindow((String... output) -> {
+                try {
+                    TaggerProxy proxy = new TaggerProxy();
+                    proxy.setTakipiPath(output[0]);
+                    proxy.setInputFile(output[1]);
+                    proxy.setOutputFile(output[2]);
+
+                    if (!proxy.blockRun()) {
+                        Log.e(TAG, "proxy.blockRun() error");
+                    }
+
+                    LocalTagger tagger = new LocalTagger(proxy.getOutputFile(), output[2]);
+                    tagger.startProcessing();
+                } catch(TransformerException | IOException e) {
+                    Log.e(TAG, e.getMessage());
+                }
+            });
+
+            mainWindow.show();
         }
-
-        LocalTagger tagger = new LocalTagger(proxy.getOutputFile(), "outputNowy.xml");
-        tagger.startProcessing();
     }
 }

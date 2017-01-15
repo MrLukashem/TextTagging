@@ -23,6 +23,8 @@ public class SplitterEngine {
     private BufferedReader mReader;
     private boolean mPrepared;
 
+    private int mCatterInfo = 0;
+
     private final String mSentenceSeparatorRegex = "((.*)\\.(.*))+";
 
     // Parse a string buffer and returns it in array.
@@ -48,12 +50,47 @@ public class SplitterEngine {
     }
 
     private String[] catSentense(String buffer) {
-        return buffer.split("\\.");
+        String[] resultArray = buffer.split("\\.|\\?");
+        if (resultArray.length > 2) {
+            int idx = 0;
+            for (int i = 0 ; i < mCatterInfo; i++) {
+                idx = buffer.indexOf('.', idx + 1);
+            }
+
+            resultArray = new String[2];
+            resultArray[0] = buffer.substring(0, idx).trim();
+            resultArray[1] = buffer.substring(idx + 1, buffer.length()).trim();
+        }
+
+        return resultArray;
     }
 
     private boolean isSentenseSeparator(String line) {
         // more complex operations will be put soon.
-        return line.matches(mSentenceSeparatorRegex);
+        boolean separator = line.matches(mSentenceSeparatorRegex);
+        mCatterInfo = 0;
+
+        if (line.contains(".")) {
+            String[] separatedStrings = line.split("\\.|\\?");
+            if (separatedStrings.length == 0) {
+                return false;
+            }  else if (separatedStrings.length == 1) {
+                return true;
+            } else {
+                for (int i = 1; i < separatedStrings.length; i++) {
+                    mCatterInfo++;
+
+                    if (Character.isUpperCase(separatedStrings[i].trim().charAt(0))
+                            || Character.isDigit(separatedStrings[i].trim().charAt(0))) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+        }
+
+        return false;
     }
 
     private String feedMeMoreData() {

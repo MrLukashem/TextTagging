@@ -15,6 +15,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -83,6 +84,17 @@ public class LocalTagger {
         customDateRegexFinder.applyTagsToXmlFile(document);
     }
 
+    private void removeRedundantNewLines() throws IOException{
+   /*     try(BufferedReader br = new BufferedReader(new FileReader(mOutFileName))) {
+            Log.v(TAG, "outputfile = " + mOutFileName);
+            for(String line; (line = br.readLine()) != null; ) {
+                line.replaceAll("[\r\n]", "\n");
+                // process the line.
+            }
+            // line is not visible here.
+        }*/
+    }
+
     private boolean saveDocument(Document document) {
         try {
             TransformerFactory transformerFactory =
@@ -97,11 +109,16 @@ public class LocalTagger {
             StreamResult consoleResult =
                     new StreamResult(System.out);
             transformer.transform(source, consoleResult);
+
+            removeRedundantNewLines();
         } catch (TransformerConfigurationException e) {
             e.printStackTrace();
             return false;
         } catch (TransformerException e) {
             e.printStackTrace();
+            return false;
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
             return false;
         }
 
@@ -118,7 +135,7 @@ public class LocalTagger {
     }
 
     private void removeRedundant(Document document) {
-        NodeList nodeList = document.getElementsByTagName("tok");
+        NodeList nodeList = document.getElementsByTagName("element_desc");
         NodeList children;
         Node node;
         Node child;
@@ -141,12 +158,12 @@ public class LocalTagger {
         }
     }
 
-    private boolean isProperNoun(Node content) {
+    private boolean isProperNoun(Node content, List<String> currentProperNouns) {
         boolean isProperNoun =
                 (content.getTextContent().length() > 0
                         && Character.isUpperCase(content.getTextContent().charAt(0)));
 
-        if (isProperNoun) {
+        if (isProperNoun && currentProperNouns.isEmpty()) {
             NodeList list = content.getParentNode().getChildNodes();
             Node node;
             boolean oneLexOnly = true;
@@ -156,14 +173,42 @@ public class LocalTagger {
                 if (node.getNodeName().equals("lex")) {
                     Node ctag = node.getLastChild();
                     String s = ctag.getTextContent();
-                    oneLexOnly &= s.contains("subst");
+                    oneLexOnly &= s.contains("subst:sg");
+
+                    break;
                 }
             }
 
             return oneLexOnly;
-        } else {
-            return false;
         }
+        else if (isProperNoun) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private boolean isProperNounExtended(Node content) {
+        boolean isProperNoun = (content.getTextContent().length() > 0
+                && !Character.isUpperCase(content.getTextContent().charAt(0)));
+
+        if (isProperNoun) {
+            NodeList list = content.getParentNode().getChildNodes();
+            Node node;
+
+            for (int i = 0; i < list.getLength(); i++) {
+                node = list.item(i);
+                if (node.getNodeName().equals("lex")) {
+                    Node ctag = node.getLastChild();
+                    String s = ctag.getTextContent();
+                    isProperNoun = isProperNoun & (s.contains("fin") | s.contains("bedzie") | s.contains("praet"));
+                }
+            }
+
+            return isProperNoun;
+        }
+
+        return false;
     }
 
     private boolean isTaggedAsProperNoun(Node parentNode) {
@@ -184,6 +229,9 @@ public class LocalTagger {
         NodeList nodeList = document.getElementsByTagName("element_name");
         Node node;
         String content;
+        int previousIndex = 0;
+        int nextIndex = 0;
+        boolean invokeExtendedCheck = false;
 
         for (int i = 0; i < nodeList.getLength(); i++) {
             node = nodeList.item(i);
@@ -192,14 +240,31 @@ public class LocalTagger {
             }
 
             content = node.getTextContent();
-
-            if (content.equals("Microsoft")) {
-                int d = 0;
+            if (content.equals("Samsung")) {
+                int f = 0;
             }
             // Probably a proper noun if true.
-            if (isProperNoun(node)) {
+            if (isProperNoun(node, resultList)) {
                 resultList.add(content);
-            } else {
+
+                previousIndex = i - 1;
+                nextIndex = i + 1;
+                if (previousIndex >= 0 && nextIndex < nodeList.getLength()) {
+                    if (nodeList.item(previousIndex).getTextContent().equals(".")) {
+                        invokeExtendedCheck = true;
+                    } else {
+                        invokeExtendedCheck = false;
+                    }
+                }
+            }
+            else if (invokeExtendedCheck) {
+                if (!isProperNounExtended(node)) {
+                    resultList.clear();
+                }
+
+                invokeExtendedCheck = false;
+            }
+            else {
                 if (!resultList.isEmpty()) {
                     return resultList;
                 }
@@ -230,7 +295,7 @@ public class LocalTagger {
                 } else if (firstElement && !listContent.equals(content)) {
                     itr = list.iterator();
                 } else if (!listContent.equals(content)) {
-                    return false;
+                    return listContent.compareToIgnoreCase(content) != 0;
                 }
             }
 
@@ -292,12 +357,12 @@ public class LocalTagger {
         modify(document, "tok", "element_desc");
         modify(document, "ctag", "element_type");
 
+        removeRedundant(document);
+
         for(;;) {
             if (!findProperNouns(document))
                 break;
         }
-
-        removeRedundant(document);
     }
 
     private boolean prepareInputFile() {
@@ -337,6 +402,10 @@ public class LocalTagger {
         return true;
     }
 
+    private void clearFile() {
+
+    }
+
     public LocalTagger() {
         mInFileName = "input.xml";
         mOutFileName = "output.xml";
@@ -368,6 +437,8 @@ public class LocalTagger {
             putAdditionalTagsToFile(doc);
 
             saveDocument(doc);
+
+            clearFile();
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
             Log.e(TAG, "Error while processing");
