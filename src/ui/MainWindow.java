@@ -1,5 +1,6 @@
 package ui;
 
+import com.studiesproject.engine.SentensesSplitter;
 import com.studiesproject.utils.Log;
 import com.studiesproject.utils.ResultCallback;
 import com.sun.istack.internal.NotNull;
@@ -7,6 +8,8 @@ import com.sun.istack.internal.NotNull;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Created by MrLukashem on 14.01.2017.
@@ -21,6 +24,8 @@ public class MainWindow {
     private JPanel mPanel;
     private JLabel mInputFilePath;
     private JLabel mTakipiExePath;
+    private JButton mSegmButton;
+    private JTextField textField1;
 
     private JFrame mFrame;
     private JFileChooser mTakipiPathChooser;
@@ -29,6 +34,7 @@ public class MainWindow {
     private String mTakipiPath = "";
     private String mInputPath = "";
     private String mOutputName = "";
+    private String mSegmOutputFile = "";
 
     private ResultCallback mCB = null;
 
@@ -77,6 +83,30 @@ public class MainWindow {
             mCB.callback(mTakipiPath, mInputPath, mOutputName);
             mFrame.dispose();
         });
+
+        mSegmButton.addActionListener((ActionEvent e) -> {
+            try {
+                mSegmOutputFile = textField1.getText();
+                if (mSegmOutputFile.isEmpty()) {
+                    return;
+                }
+
+                FileWriter fileWriter = new FileWriter(mSegmOutputFile);
+                SentensesSplitter sentensesSplitter = new SentensesSplitter();
+                sentensesSplitter.setDataSourceAndPrepare(mInputPath);
+
+                String line;
+                while (sentensesSplitter.hasNext()) {
+                    line = sentensesSplitter.next();
+                    fileWriter.write(line);
+                    fileWriter.write('\n');
+                }
+
+                fileWriter.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
     }
 
     private void createUIComponents() {
@@ -93,6 +123,6 @@ public class MainWindow {
         mFrame.setLocationRelativeTo(null);
         mFrame.setVisible(true);
         mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        mFrame.setMinimumSize(new Dimension(700, 600));
+        mFrame.setMinimumSize(new Dimension(1000, 800));
     }
 }

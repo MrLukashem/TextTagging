@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><file><sentence type="s">
+<element_desc>
+<element_name>W</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>lutym 1932</element_name>
+<lex><base>luty</base><element_type>cdate</element_type></lex>
+
+
+<cdate>lutym 1932</cdate></element_desc>
+
+<element_desc>
+<element_name>roku</element_name>
+<lex disamb="1"><base>rok</base><element_type>subst:sg:gen:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>doszlo</element_name>
+<lex disamb="1"><base>doszla</base><element_type>subst:sg:voc:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>do</element_name>
+<lex disamb="1"><base>do</base><element_type>prep:gen</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>niezwyklych</element_name>
+<lex><base>niezwyklych</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>wydarzen</element_name>
+<lex disamb="1"><base>wydarzena</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Wczoraj</element_name>
+<lex disamb="1"><base>wczoraj</base><element_type>qub</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>Samsung</element_name>
+<lex disamb="1"><base>samsung</base><element_type>subst:sg:nom:m1</element_type></lex>
+
+<proper_noun>Samsung</proper_noun></element_desc>
+<element_desc>
+<element_name>oglosil</element_name>
+<lex><base>oglosil</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>nab?r</element_name>
+<lex disamb="1"><base>nab?r</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>na</element_name>
+<lex><base>na</base><element_type>prep:loc</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>stanowiska</element_name>
+<lex><base>stanowisko</base><element_type>subst:sg:gen:n</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>dla</element_name>
+<lex disamb="1"><base>dla</base><element_type>prep:gen</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>programist?w.</element_name>
+<lex disamb="1"><base>programist?w.</base><element_type>tsym</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>12.03.1993</element_name>
+<lex disamb="1"><base>12.03.1993</base><element_type>tdate</element_type></lex>
+<date>12.03.1993</date></element_desc>
+<element_desc>
+<element_name>to</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>przelomowa</element_name>
+<lex disamb="1"><base>przelomowy</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>data</element_name>
+<lex disamb="1"><base>data</base><element_type>subst:sg:nom:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>M?j</element_name>
+<lex disamb="1"><base>M?j</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>numer</element_name>
+<lex disamb="1"><base>numer</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>telefonu</element_name>
+<lex disamb="1"><base>telefon</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>to</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>722392123</element_name>
+<lex disamb="1"><base>722392123</base><element_type>tnum:integer</element_type></lex>
+<PN>722392123</PN></element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Odwiedz</element_name>
+<lex><base>odwiedza</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>strone</element_name>
+<lex><base>strony</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>internetowa</element_name>
+<lex disamb="1"><base>internetowy</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>juz</element_name>
+<lex disamb="1"><base>juz</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>dzisiaj</element_name>
+<lex disamb="1"><base>dzisiaj</base><element_type>qub</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>!</element_name>
+<lex disamb="1"><base>!</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>To</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>link</element_name>
+<lex disamb="1"><base>link</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>to</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>niej</element_name>
+<lex disamb="1"><base>on</base><element_type>ppron3:sg:gen:f:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>:</element_name>
+<lex disamb="1"><base>:</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>www.google.com</element_name>
+<lex disamb="1"><base>www.google.com</base><element_type>turi</element_type></lex>
+<URL>www.google.com</URL></element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+</file>

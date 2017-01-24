@@ -1,0 +1,2243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><file><sentence type="s">
+<element_desc>
+<element_name>Specjalnie</element_name>
+<lex disamb="1"><base>specjalnie</base><element_type>adv:pos</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zwracam</element_name>
+<lex disamb="1"><base>zwracać</base><element_type>fin:sg:pri:imperf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>uwage</element_name>
+<lex disamb="1"><base>uwage</base><element_type>ign</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>na</element_name>
+<lex><base>na</base><element_type>prep:loc</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>brak</element_name>
+<lex><base>brak</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>jakichkolwiek</element_name>
+<lex><base>jakikolwiek</base><element_type>adj:pl:gen:m1:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>problem?w</element_name>
+<lex disamb="1"><base>problem?w</base><element_type>tsym</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>bowiem</element_name>
+<lex disamb="1"><base>bowiem</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>test</element_name>
+<lex disamb="1"><base>test</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>przeprowadzilismy</element_name>
+<lex><base>przeprowadzilismy</base><element_type>adj:sg:nom:m1:pos</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>grudniu</element_name>
+<lex disamb="1"><base>grudzień</base><element_type>subst:sg:loc:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>oprogramowaniem</element_name>
+<lex disamb="1"><base>oprogramować</base><element_type>ger:sg:inst:n:perf:aff</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>dostepnym</element_name>
+<lex><base>dostepnyma</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>tym</element_name>
+<lex><base>to</base><element_type>subst:sg:inst:n</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>wlasnie</element_name>
+<lex disamb="1"><base>wlasnąć</base><element_type>fin:sg:ter:perf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>czasie</element_name>
+<lex disamb="1"><base>czas</base><element_type>subst:sg:loc:m3</element_type></lex>
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>jest</element_name>
+<lex disamb="1"><base>być</base><element_type>fin:sg:ter:imperf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>tajemnica</element_name>
+<lex disamb="1"><base>tajemnica</base><element_type>subst:sg:nom:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>ze</element_name>
+<lex><base>z</base><element_type>prep:inst:wok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>wczesne</element_name>
+<lex><base>wczesny</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zwlaszcza</element_name>
+<lex><base>zwlaszczy</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>pierwsze</element_name>
+<lex><base>pierwszy</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>wersje</element_name>
+<lex><base>wersja</base><element_type>subst:pl:nom:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>firmware</element_name>
+<lex><base>firmwary</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>konsoli</element_name>
+<lex disamb="1"><base>konsola</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>zawsze</element_name>
+<lex disamb="1"><base>zawsze</base><element_type>qub</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>pozwalaly</element_name>
+<lex><base>pozwalala</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>na</element_name>
+<lex><base>na</base><element_type>prep:loc</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>bezproblemowa</element_name>
+<lex disamb="1"><base>bezproblemowy</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>prace</element_name>
+<lex disamb="1"><base>praca</base><element_type>subst:pl:nom:f</element_type></lex>
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Filmy</element_name>
+<lex disamb="1"><base>film</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex disamb="1"><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>gry</element_name>
+<lex disamb="1"><base>gra</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>zostaly</element_name>
+<lex disamb="1"><base>zostala</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>zarejestrowane</element_name>
+<lex><base>zarejestrować</base><element_type>ppas:sg:nom:n:perf:aff</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>aparatem</element_name>
+<lex disamb="1"><base>aparat</base><element_type>subst:sg:inst:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>cyfrowym</element_name>
+<lex><base>cyfrowy</base><element_type>adj:sg:inst:m1:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>systemu</element_name>
+<lex disamb="1"><base>system</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>m43</element_name>
+<lex disamb="1"><base>m43</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex disamb="1"><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>wymienna</element_name>
+<lex disamb="1"><base>wymienny</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>optyka</element_name>
+<lex disamb="1"><base>optyka</base><element_type>subst:sg:nom:f</element_type></lex>
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>jest</element_name>
+<lex disamb="1"><base>być</base><element_type>fin:sg:ter:imperf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>to</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>sprzet</element_name>
+<lex><base>sprzeta</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>zdolny</element_name>
+<lex><base>zdolny</base><element_type>adj:sg:nom:m1:pos</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>do</element_name>
+<lex disamb="1"><base>do</base><element_type>prep:gen</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>pokazania</element_name>
+<lex disamb="1"><base>pokazać</base><element_type>ger:sg:gen:n:perf:aff</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>szerokiego</element_name>
+<lex><base>szeroki</base><element_type>adj:sg:gen:m1:pos</element_type></lex>
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>zakresu</element_name>
+<lex disamb="1"><base>zakres</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>tonalnego</element_name>
+<lex><base>tonalny</base><element_type>adj:sg:gen:m1:pos</element_type></lex>
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>dostepnego</element_name>
+<lex><base>dostepny</base><element_type>adj:sg:gen:m1:pos</element_type></lex>
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>trybie</element_name>
+<lex disamb="1"><base>tryba</base><element_type>subst:sg:dat:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>HDR</element_name>
+<lex disamb="1"><base>hdra</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>stad</element_name>
+<lex disamb="1"><base>stado</base><element_type>subst:pl:gen:n</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>obraz</element_name>
+<lex><base>obraza</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>kt?ry</element_name>
+<lex disamb="1"><base>kt?ry</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zobaczycie</element_name>
+<lex disamb="1"><base>zobaczyć</base><element_type>fin:pl:sec:perf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>filmach</element_name>
+<lex disamb="1"><base>film</base><element_type>subst:pl:loc:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>jest</element_name>
+<lex disamb="1"><base>być</base><element_type>fin:sg:ter:imperf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>tylko</element_name>
+<lex><base>tylko</base><element_type>conj</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>cieniem</element_name>
+<lex disamb="1"><base>cień</base><element_type>subst:sg:inst:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>wspanialej</element_name>
+<lex disamb="1"><base>wspaniale</base><element_type>adv:comp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>plastyki</element_name>
+<lex disamb="1"><base>plastyka</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+
+
+
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>kt?ra</element_name>
+<lex disamb="1"><base>kt?ra</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>mozna</element_name>
+<lex disamb="1"><base>moznać</base><element_type>fin:sg:ter:perf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>podziwiac</element_name>
+<lex disamb="1"><base>podziwiac</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>trybie</element_name>
+<lex><base>tryba</base><element_type>subst:sg:dat:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>HDR</element_name>
+<lex disamb="1"><base>hdra</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>W</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>wielu</element_name>
+<lex><base>wiele</base><element_type>num:pl:nom:m1:rec</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>miejscach</element_name>
+<lex disamb="1"><base>miejsce</base><element_type>subst:pl:loc:n</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zwracam</element_name>
+<lex disamb="1"><base>zwracać</base><element_type>fin:sg:pri:imperf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>uwage</element_name>
+<lex disamb="1"><base>uwage</base><element_type>ign</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>na</element_name>
+<lex><base>na</base><element_type>prep:loc</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>to</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>ze</element_name>
+<lex><base>z</base><element_type>prep:inst:wok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>widoczne</element_name>
+<lex><base>widoczny</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>sa</element_name>
+<lex disamb="1"><base>sa</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>wszystkie</element_name>
+<lex><base>wszystek</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>szczeg?ly</element_name>
+<lex disamb="1"><base>szczeg?ly</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zar?wno</element_name>
+<lex disamb="1"><base>zar?wno</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>swiatlach</element_name>
+<lex><base>swiatla</base><element_type>subst:pl:loc:f</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>(</element_name>
+<lex disamb="1"><base>(</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>jasne</element_name>
+<lex><base>jasny</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>gradienty</element_name>
+<lex><base>gradient</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>)</element_name>
+<lex disamb="1"><base>)</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>jak</element_name>
+<lex><base>jaka</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>i</element_name>
+<lex disamb="1"><base>i</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>cieniach</element_name>
+<lex disamb="1"><base>cień</base><element_type>subst:pl:loc:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>(</element_name>
+<lex disamb="1"><base>(</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>ciemne</element_name>
+<lex><base>ciemny</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>detale</element_name>
+<lex><base>detal</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>)</element_name>
+<lex disamb="1"><base>)</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Niestety</element_name>
+<lex disamb="1"><base>niestety</base><element_type>qub</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>wiekszosci</element_name>
+<lex><base>wiekszoscia</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>przypadk?w</element_name>
+<lex disamb="1"><base>przypadk?w</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>udalo</element_name>
+<lex disamb="1"><base>udala</base><element_type>subst:sg:voc:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>sie</element_name>
+<lex disamb="1"><base>sie</base><element_type>ign</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>tego</element_name>
+<lex><base>to</base><element_type>subst:sg:gen:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>wszystkiego</element_name>
+<lex><base>wszystko</base><element_type>subst:sg:gen:m1</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>zarejestrowac</element_name>
+<lex><base>zarejestrowac</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>posiadanym</element_name>
+<lex><base>posiadać</base><element_type>ppas:sg:inst:m1:imperf:aff</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>sprzetem</element_name>
+<lex disamb="1"><base>sprzet</base><element_type>subst:sg:inst:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>i</element_name>
+<lex disamb="1"><base>i</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>bedzie</element_name>
+<lex disamb="1"><base>bód</base><element_type>subst:sg:loc:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>tego</element_name>
+<lex disamb="1"><base>to</base><element_type>subst:sg:gen:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>widac</element_name>
+<lex><base>widac</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>ponizszych</element_name>
+<lex><base>ponizszych</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>filmach</element_name>
+<lex disamb="1"><base>film</base><element_type>subst:pl:loc:m3</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>W</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>zwiazku</element_name>
+<lex><base>zwiazek</base><element_type>subst:sg:gen:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>tym</element_name>
+<lex><base>to</base><element_type>subst:sg:inst:n</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>ponizsze</element_name>
+<lex disamb="1"><base>ponizsz</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>filmy</element_name>
+<lex><base>film</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>stanowia</element_name>
+<lex disamb="1"><base>stanowie</base><element_type>subst:sg:gen:n</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>tylko</element_name>
+<lex disamb="1"><base>tylko</base><element_type>conj</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>przedsmak</element_name>
+<lex disamb="1"><base>przedsmak</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>wrazen</element_name>
+<lex disamb="1"><base>wrazen</base><element_type>subst:sg:nom:m1</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>jakich</element_name>
+<lex><base>jaki</base><element_type>adj:pl:gen:m1:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>mozna</element_name>
+<lex disamb="1"><base>moznać</base><element_type>fin:sg:ter:perf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>doznac</element_name>
+<lex disamb="1"><base>doznac</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>podczas</element_name>
+<lex disamb="1"><base>podczas</base><element_type>prep:gen</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>grania</element_name>
+<lex disamb="1"><base>grać</base><element_type>ger:sg:gen:n:imperf:aff</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>trybie</element_name>
+<lex><base>tryba</base><element_type>subst:sg:dat:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>HDR</element_name>
+<lex disamb="1"><base>hdra</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>I</element_name>
+<lex disamb="1"><base>i</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>jeszcze</element_name>
+<lex disamb="1"><base>jeszcze</base><element_type>qub</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>ostatnia</element_name>
+<lex disamb="1"><base>ostatni</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>uwaga</element_name>
+<lex disamb="1"><base>uwaga</base><element_type>subst:sg:nom:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Jak</element_name>
+<lex><base>jaka</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>juz</element_name>
+<lex disamb="1"><base>juz</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>wspomnialem</element_name>
+<lex disamb="1"><base>wspomnial</base><element_type>subst:sg:inst:m3</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>telewizor</element_name>
+<lex><base>telewizor</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>Samsung</element_name>
+<lex disamb="1"><base>samsung</base><element_type>subst:sg:nom:m1</element_type></lex>
+
+<proper_noun>Samsung</proper_noun></element_desc>
+<element_desc>
+<element_name>49KS8000</element_name>
+<lex disamb="1"><base>49KS8000</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>bez</element_name>
+<lex><base>beza</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>problemu</element_name>
+<lex disamb="1"><base>problem</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>wykryl</element_name>
+<lex disamb="1"><base>wykryl</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>metadane</element_name>
+<lex><base>metadać</base><element_type>ppas:sg:nom:n:perf:aff</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>sygnale</element_name>
+<lex disamb="1"><base>sygnał</base><element_type>subst:sg:loc:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex disamb="1"><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>konsoli</element_name>
+<lex disamb="1"><base>konsola</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>i</element_name>
+<lex disamb="1"><base>i</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>sam</element_name>
+<lex><base>sam</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>przelaczyl</element_name>
+<lex><base>przelaczyl</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>sie</element_name>
+<lex disamb="1"><base>sie</base><element_type>ign</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex disamb="1"><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>tryb</element_name>
+<lex><base>tryba</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>HDR</element_name>
+<lex disamb="1"><base>hdra</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Telewizor</element_name>
+<lex disamb="1"><base>telewizor</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>ten</element_name>
+<lex><base>ten</base><element_type>adj:sg:nom:m1:pos</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>posiada</element_name>
+<lex><base>posiad</base><element_type>subst:sg:gen:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>jeszcze</element_name>
+<lex disamb="1"><base>jeszcze</base><element_type>qub</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>specjalnego</element_name>
+<lex><base>specjalny</base><element_type>adj:sg:gen:m1:pos</element_type></lex>
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>trybu</element_name>
+<lex disamb="1"><base>tryb</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>?HDR</element_name>
+<lex disamb="1"><base>?HDR</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>Gra</element_name>
+<lex disamb="1"><base>gra</base><element_type>subst:sg:nom:f</element_type></lex>
+
+<proper_noun>Gra</proper_noun></element_desc>
+<ns/>
+<element_desc>
+<element_name>?</element_name>
+<lex disamb="1"><base>?</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Pomimo</element_name>
+<lex disamb="1"><base>pomimo</base><element_type>prep:gen</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>tego</element_name>
+<lex disamb="1"><base>to</base><element_type>subst:sg:gen:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>49KS8000</element_name>
+<lex disamb="1"><base>49KS8000</base><element_type>tsym</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>pracujac</element_name>
+<lex disamb="1"><base>pracujac</base><element_type>subst:sg:nom:m1</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>trybie</element_name>
+<lex><base>tryba</base><element_type>subst:sg:dat:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>HDR</element_name>
+<lex disamb="1"><base>hdra</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>pozwolil</element_name>
+<lex disamb="1"><base>pozwolil</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>mi</element_name>
+<lex disamb="1"><base>ja</base><element_type>ppron12:sg:dat:m1:pri:nakc</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>przelaczyc</element_name>
+<lex disamb="1"><base>przelaczyca</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>sie</element_name>
+<lex disamb="1"><base>sie</base><element_type>ign</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex disamb="1"><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>tryb</element_name>
+<lex><base>tryba</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>?Gra</element_name>
+<lex disamb="1"><base>?Gra</base><element_type>tsym</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>?</element_name>
+<lex disamb="1"><base>?</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>kt?rym</element_name>
+<lex disamb="1"><base>kt?rym</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>to</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>odnotowalem</element_name>
+<lex disamb="1"><base>odnotowal</base><element_type>subst:sg:inst:m1</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>istotnej</element_name>
+<lex disamb="1"><base>istotny</base><element_type>adj:sg:gen:f:pos</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>r?znicy</element_name>
+<lex disamb="1"><base>r?znicy</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>input</element_name>
+<lex disamb="1"><base>inputa</base><element_type>subst:pl:gen:f</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>lagu</element_name>
+<lex disamb="1"><base>lag</base><element_type>subst:sg:gen:m3</element_type></lex>
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>natomiast</element_name>
+<lex disamb="1"><base>natomiast</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>widac</element_name>
+<lex disamb="1"><base>widac</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>bylo</element_name>
+<lex disamb="1"><base>byla</base><element_type>subst:sg:voc:f</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>spora</element_name>
+<lex><base>spór</base><element_type>subst:sg:gen:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>r?znice</element_name>
+<lex disamb="1"><base>r?znice</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>obrazie</element_name>
+<lex><base>obraza</base><element_type>subst:sg:dat:f</element_type></lex>
+
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>:</element_name>
+<lex disamb="1"><base>:</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>sztuczne</element_name>
+<lex disamb="1"><base>sztuczny</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>wyostrzenie</element_name>
+<lex disamb="1"><base>wyostrzyć</base><element_type>ger:sg:nom:n:perf:aff</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>krawedzi</element_name>
+<lex><base>krawed</base><element_type>subst:pl:nom:m1</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>oraz</element_name>
+<lex disamb="1"><base>oraz</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>jasniejsza</element_name>
+<lex disamb="1"><base>jasny</base><element_type>adj:sg:nom:f:comp</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>biel</element_name>
+<lex disamb="1"><base>biel</base><element_type>subst:sg:nom:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>(</element_name>
+<lex disamb="1"><base>(</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>z</element_name>
+<lex disamb="1"><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>wieksza</element_name>
+<lex disamb="1"><base>wieksza</base><element_type>subst:sg:nom:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zawartoscia</element_name>
+<lex disamb="1"><base>zawartoscia</base><element_type>subst:sg:nom:f</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>barwy</element_name>
+<lex disamb="1"><base>barwa</base><element_type>subst:sg:gen:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>niebieskiej</element_name>
+<lex disamb="1"><base>niebieski</base><element_type>adj:sg:gen:f:pos</element_type></lex>
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>To</element_name>
+<lex><base>to</base><element_type>subst:sg:nom:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>typowe</element_name>
+<lex><base>typowy</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>zabiegi</element_name>
+<lex disamb="1"><base>zabieg</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>niemal</element_name>
+<lex disamb="1"><base>niemal</base><element_type>qub</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>wszystkich</element_name>
+<lex><base>wszystek</base><element_type>adj:pl:gen:m1:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>producent?w</element_name>
+<lex disamb="1"><base>producent?w</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>trybie</element_name>
+<lex><base>tryba</base><element_type>subst:sg:dat:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>gra</element_name>
+<lex><base>gra</base><element_type>subst:sg:nom:f</element_type></lex>
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>dlatego</element_name>
+<lex disamb="1"><base>dlatego</base><element_type>qub</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>wyb?r</element_name>
+<lex disamb="1"><base>wyb?r</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>trybu</element_name>
+<lex disamb="1"><base>tryb</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>obrazu</element_name>
+<lex disamb="1"><base>obraz</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>pozostawiam</element_name>
+<lex disamb="1"><base>pozostawiać</base><element_type>fin:sg:pri:imperf</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>osobistym</element_name>
+<lex><base>osobisty</base><element_type>adj:sg:inst:m1:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>preferencjom</element_name>
+<lex disamb="1"><base>preferencja</base><element_type>subst:pl:dat:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Osobiscie</element_name>
+<lex><base>osobisieć</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>wole</element_name>
+<lex><base>wół</base><element_type>subst:sg:loc:m2</element_type></lex>
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>czysty</element_name>
+<lex><base>czysty</base><element_type>adj:sg:nom:m1:pos</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>tryb</element_name>
+<lex><base>tryba</base><element_type>subst:pl:gen:f</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>HDR</element_name>
+<lex disamb="1"><base>hdra</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>takze</element_name>
+<lex disamb="1"><base>takze</base><element_type>ign</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex disamb="1"><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>tego</element_name>
+<lex><base>to</base><element_type>subst:sg:gen:n</element_type></lex>
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>powodu</element_name>
+<lex disamb="1"><base>powód</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>ze</element_name>
+<lex><base>z</base><element_type>prep:inst:wok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>input</element_name>
+<lex disamb="1"><base>inputa</base><element_type>subst:pl:gen:f</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>lag</element_name>
+<lex disamb="1"><base>laga</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>byl</element_name>
+<lex><base>byl</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>nim</element_name>
+<lex><base>on</base><element_type>ppron3:sg:inst:m1:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>na</element_name>
+<lex><base>na</base><element_type>prep:loc</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>tyle</element_name>
+<lex><base>tył</base><element_type>subst:sg:loc:m3</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>niski</element_name>
+<lex><base>niski</base><element_type>adj:sg:nom:m1:pos</element_type></lex>
+
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>ze</element_name>
+<lex><base>z</base><element_type>prep:inst:wok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>pozwalal</element_name>
+<lex disamb="1"><base>pozwalala</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>na</element_name>
+<lex disamb="1"><base>na</base><element_type>prep:loc</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>komfortowa</element_name>
+<lex disamb="1"><base>komfortowy</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>gre</element_name>
+<lex><base>gry</base><element_type>adj:sg:nom:n:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>(</element_name>
+<lex disamb="1"><base>(</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>oczywiscie</element_name>
+<lex><base>oczywisieć</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>trybie</element_name>
+<lex><base>tryba</base><element_type>subst:sg:dat:f</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>lokalnym</element_name>
+<lex><base>lokalny</base><element_type>adj:sg:inst:m1:pos</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>bo</element_name>
+<lex disamb="1"><base>bo</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>trybu</element_name>
+<lex disamb="1"><base>tryb</base><element_type>subst:sg:gen:m3</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>wieloosobowego</element_name>
+<lex><base>wieloosobowy</base><element_type>adj:sg:gen:m1:pos</element_type></lex>
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>nie</element_name>
+<lex><base>on</base><element_type>ppron3:sg:acc:n:ter:akc:praep</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>sprawdzalem</element_name>
+<lex disamb="1"><base>sprawdzal</base><element_type>subst:sg:inst:m3</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>)</element_name>
+<lex disamb="1"><base>)</base><element_type>interp</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>Niski</element_name>
+<lex disamb="1"><base>niski</base><element_type>adj:sg:nom:m1:pos</element_type></lex>
+
+
+
+</element_desc>
+<element_desc>
+<element_name>input</element_name>
+<lex><base>inputa</base><element_type>subst:pl:gen:f</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>lag</element_name>
+<lex disamb="1"><base>laga</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>jest</element_name>
+<lex disamb="1"><base>być</base><element_type>fin:sg:ter:imperf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>jedna</element_name>
+<lex disamb="1"><base>jeden</base><element_type>adj:sg:nom:f:pos</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex disamb="1"><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>gl?wnych</element_name>
+<lex disamb="1"><base>gl?wnych</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zalet</element_name>
+<lex disamb="1"><base>zaleta</base><element_type>subst:pl:gen:f</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>telewizor?w</element_name>
+<lex disamb="1"><base>telewizor?w</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>Samsung</element_name>
+<lex><base>samsung</base><element_type>subst:sg:nom:m1</element_type></lex>
+
+<proper_noun>Samsung</proper_noun></element_desc>
+<ns/>
+<element_desc>
+<element_name>,</element_name>
+<lex disamb="1"><base>,</base><element_type>interp</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>w</element_name>
+<lex><base>w</base><element_type>prep:acc:nwok</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>tym</element_name>
+<lex><base>to</base><element_type>subst:sg:inst:n</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>modelu</element_name>
+<lex><base>model</base><element_type>subst:sg:gen:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>49KS8000.</element_name>
+<lex disamb="1"><base>49KS8000.</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>Wiecej</element_name>
+<lex disamb="1"><base>wiecy</base><element_type>adj:sg:gen:f:pos</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>o</element_name>
+<lex disamb="1"><base>o</base><element_type>prep:loc</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>op?znieniach</element_name>
+<lex disamb="1"><base>op?znieniach</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>dowiecie</element_name>
+<lex disamb="1"><base>dowiedzieć</base><element_type>fin:pl:sec:perf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>sie</element_name>
+<lex disamb="1"><base>sie</base><element_type>ign</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>z</element_name>
+<lex disamb="1"><base>z</base><element_type>prep:gen:nwok</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>naszego</element_name>
+<lex><base>nasz</base><element_type>adj:sg:gen:m1:pos</element_type></lex>
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>rankingu</element_name>
+<lex disamb="1"><base>ranking</base><element_type>subst:sg:gen:m3</element_type></lex>
+
+
+</element_desc>
+<element_desc>
+<element_name>Najlepsze</element_name>
+<lex><base>dobry</base><element_type>adj:sg:nom:n:sup</element_type></lex>
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>telewizory</element_name>
+<lex disamb="1"><base>telewizor</base><element_type>subst:pl:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>dla</element_name>
+<lex disamb="1"><base>dla</base><element_type>prep:gen</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>graczy</element_name>
+<lex disamb="1"><base>gracz</base><element_type>subst:pl:gen:m1</element_type></lex>
+
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+<sentence type="s">
+<element_desc>
+<element_name>A</element_name>
+<lex disamb="1"><base>a</base><element_type>conj</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>teraz</element_name>
+<lex disamb="1"><base>teraz</base><element_type>qub</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>zapraszam</element_name>
+<lex disamb="1"><base>zapraszać</base><element_type>fin:sg:pri:imperf</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>juz</element_name>
+<lex><base>juz</base><element_type>subst:sg:nom:m3</element_type></lex>
+
+</element_desc>
+<element_desc>
+<element_name>do</element_name>
+<lex disamb="1"><base>do</base><element_type>prep:gen</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>obejrzenia</element_name>
+<lex disamb="1"><base>obejrzeć</base><element_type>ger:sg:gen:n:perf:aff</element_type></lex>
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>trzech</element_name>
+<lex><base>trzy</base><element_type>num:pl:nom:m1:rec</element_type></lex>
+
+
+
+
+
+
+
+
+
+
+
+
+</element_desc>
+<element_desc>
+<element_name>kr?tkich</element_name>
+<lex disamb="1"><base>kr?tkich</base><element_type>tsym</element_type></lex>
+</element_desc>
+<element_desc>
+<element_name>film?w</element_name>
+<lex disamb="1"><base>film?w</base><element_type>tsym</element_type></lex>
+</element_desc>
+<ns/>
+<element_desc>
+<element_name>.</element_name>
+<lex disamb="1"><base>.</base><element_type>interp</element_type></lex>
+</element_desc>
+</sentence>
+</file>

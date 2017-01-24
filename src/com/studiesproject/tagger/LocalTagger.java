@@ -173,7 +173,7 @@ public class LocalTagger {
                 if (node.getNodeName().equals("lex")) {
                     Node ctag = node.getLastChild();
                     String s = ctag.getTextContent();
-                    oneLexOnly &= s.contains("subst:sg");
+                    oneLexOnly &= (s.contains("subst:sg") | s.contains("ign"));
 
                     break;
                 }
@@ -250,7 +250,9 @@ public class LocalTagger {
                 previousIndex = i - 1;
                 nextIndex = i + 1;
                 if (previousIndex >= 0 && nextIndex < nodeList.getLength()) {
-                    if (nodeList.item(previousIndex).getTextContent().equals(".")) {
+                    if (nodeList.item(previousIndex).getTextContent().equals(".")
+                            || nodeList.item(previousIndex).getTextContent().equals("?")
+                            || nodeList.item(previousIndex).getTextContent().equals("!")) {
                         invokeExtendedCheck = true;
                     } else {
                         invokeExtendedCheck = false;
